@@ -1,39 +1,24 @@
-@startuml
-
-class Being
-
-class Creature {
-
-    int health
-    int attack
-    int defense
-    String[] memory
-
-    speakTo()
-    listen()
-    attack()
-    move()
+@startuml characters
+class Character{
+#String name
+#int hp
+#int attackpower
++attack()
++hurt()
++miss()
++tell()
++hear()
 }
-
-class SpiderWeb{
-    status
-    open()
-    close()
+class Weapon{
+#String name
+#int damage
 }
-
-class Monster{
-    int magic
-    rolleyes()
-    bePissed()
+class Rope{
++tie()
 }
-
-Creature --|> Being
-
-
-Human --|> Creature
-
-Monster --|> Creature
-
-SpiderWeb --|> Being
-
+class Shoe{
++smaller()
+}
+Rope --|> Weapon
+Shoe --|> Weapon
 @enduml

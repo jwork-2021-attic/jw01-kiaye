@@ -1,68 +1,51 @@
-' https://www.bilibili.com/video/BV1zQ4y1d7dQ?p=3
-' 2:50 ~ 3:46
+@startuml timeline
 
-@startuml
-actor       老头   as oldman
-actor       蛇精    as snake  #Black
-actor       蝎子精    as scorpion   #Purple
-entity      蛛网  as spiderweb #White
+actor 三娃 as boy3 #Yellow
+actor 蛇精 as snake #Blue
+entity 铁棒 as stick #Green
+entity 鞋子 as shoe #Red
+entity 绳子 as rope #Black
 
-spiderweb -[#Green]> spiderweb : 开
-
-snake -[#Grey]> oldman : 告诉
+snake -> boy3:告诉
 note right
-    老人家，
-    你和我无冤无仇，
-    这次请你来...
+    那你准备好，
+    我来了！
 end note
 
-oldman -[#Grey]> snake : 告诉
-note left: 哼!有这么请的么？
-
-snake -[#Grey]> oldman : 告诉
+snake -> stick:使用
+stick -[#Red]> boy3:攻击
+boy3 -> stick:闪避
+snake -> boy3:告诉
 note right
-    老人家，冤仇易解不宜结，
-    我们攀个亲家交个朋友，
-    你可以安度晚年
+    哈哈哈 铁娃子
+    你的软裆让我看出来了
+    就怕打你的屁股
+    你想跑 我叫你跑不了
 end note
 
-scorpion -[#Grey]> oldman : 告诉
+snake -> shoe:释放
+shoe -> boy3:穷追不舍 套在脚上
+shoe -[#Red]> boy3:缩小
+boy3 -> boy3:受到伤害
+snake -> shoe:告诉
 note right
-    这是我们的一片诚意啊！
-    哈哈哈哈哈哈哈...
+    哈哈哈哈哈
 end note
-
-snake -[#Grey]> oldman : 告诉
-note right: 来来来，我先敬你一杯
-
-oldman -[#Grey]> snake : 告诉
-note left: 去你的
-
-oldman -[#Red]> snake : 造成伤害
-note left: 掌掴
-
-scorpion -[#Blue]> scorpion : 发怒
-note right: 哇呀呀呀呀呀...
-
-scorpion -[#Blue]> scorpion : 前进
-
-scorpion -[#Grey]> oldman : 告诉
-
-note right: 你是不想活了你
-
-scorpion -[#Red]> oldman : 造成伤害
-note left: 掐
-
-snake -[#Grey]> scorpion : 告诉
+snake -> stick:使用
+stick -[#Red]> boy3:攻击
+boy3 -[#Green]> boy3:受到伤害
+snake -> shoe:告诉
 note right
-    大王，别急，
-    留着这老头才能摸清葫芦的奥秘，
-    知己知彼才能消灾灭祸
+    哈哈哈哈哈
 end note
-
-scorpion -[#Blue]> scorpion : 转眼珠
-
-spiderweb -[#Green]> spiderweb : 关
-
+snake -> stick:使用
+stick -[#Red]> boy3:攻击
+boy3 -[#Green]> boy3:受到伤害
+boy3 -[#Blue]> boy3: 生命清零 倒下！
+snake -> shoe:告诉
+note right
+    哈哈哈哈哈
+end note
+snake -> rope: 使用
+rope -[#Red]> boy3: 捆绑
 @enduml
-
